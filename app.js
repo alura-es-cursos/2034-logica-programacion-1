@@ -1,8 +1,16 @@
-let numeroSecreto = 6;
-let numeroUsuario = prompt("Me indicas un n鷐ero por favor:");
+//Variables
+let numeroSecreto = 2;
+let numeroUsuario = prompt("Me indicas un n煤mero entre 1 y 10 por favor:");
 
 console.log(numeroUsuario);
-
+/*
+Este c贸digo realiza
+la comparaci贸n
+*/
 if (numeroUsuario == numeroSecreto) {
-    alert('Acertaste el n鷐ero');
+    //Acertamos, fue verdadera la condici贸n
+    alert(`Acertaste, el n煤mero es: ${numeroUsuario}`);
+} else {
+    //La condici贸n no se cumpli贸
+    alert('Lo siento, no acertaste el n煤mero');
 }
