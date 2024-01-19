@@ -4,10 +4,11 @@ alert('Bienvenidos al juego del número secreto');
 
 let numeroUsuario = 0;
 let intentos = 1;
-let palabraVeces = 'vez';
+//let palabraVeces = 'vez';
 let min = 1;
 let max = 10;
 let numeroSecreto = Math.floor(min + Math.random() * max);
+let maximosIntentos = 3;
 
 while (numeroUsuario != numeroSecreto) {
     numeroUsuario = prompt(`Me indicas un número entre ${min} y ${max} por favor:`);
@@ -15,7 +16,7 @@ while (numeroUsuario != numeroSecreto) {
     console.log(numeroUsuario);
     if (numeroUsuario == numeroSecreto) {
         //Acertamos, fue verdadera la condición
-        alert(`Acertaste, el número es: ${numeroUsuario}. Lo hiciste en ${intentos} ${palabraVeces}`);
+        alert(`Acertaste, el número es: ${numeroUsuario}. Lo hiciste en ${intentos} ${intentos == 1 ? 'vez' : 'veces' }`);
     } else {
         if (numeroUsuario > max || numeroUsuario < min){
           alert(
@@ -28,8 +29,10 @@ while (numeroUsuario != numeroSecreto) {
         //Incrementamos el contador cuando no acierta
         intentos = intentos + 1;
         palabraVeces = 'veces';
-        //La condición no se cumplió
-        //alert('Lo siento, no acertaste el número');
+    }
+    if (intentos > maximosIntentos) {
+        alert(`Llegaste al número máximo de ${maximosIntentos} intentos`);
+        break;
     }
 }
 
