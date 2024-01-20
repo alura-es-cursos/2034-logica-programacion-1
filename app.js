@@ -10,8 +10,11 @@ let max = 10;
 let numeroSecreto = Math.floor(min + Math.random() * max);
 let maximosIntentos = 3;
 
+console.log('Numero secreto: ', numeroSecreto);
+
 while (numeroUsuario != numeroSecreto) {
-    numeroUsuario = prompt(`Me indicas un número entre ${min} y ${max} por favor:`);
+    numeroUsuario = parseInt(prompt(`Me indicas un número entre ${min} y ${max} por favor:`));
+    console.log(`Numero usuario: ${numeroUsuario} (intento ${intentos})`);
 
     console.log(numeroUsuario);
     if (numeroUsuario == numeroSecreto) {
@@ -27,7 +30,7 @@ while (numeroUsuario != numeroSecreto) {
             alert('El número secreto es mayor');
         }
         //Incrementamos el contador cuando no acierta
-        intentos = intentos + 1;
+        intentos = intentos ++;
         palabraVeces = 'veces';
     }
     if (intentos > maximosIntentos) {
@@ -36,5 +39,13 @@ while (numeroUsuario != numeroSecreto) {
     }
 }
 
-while (numeroUsuario > 10 || numeroUsuario < 0){
-  alert('El número debe ser entre 1 y 10')}
+
+/*
+function random(min, max) {
+  return min + Math.random() * (max - min);
+}
+
+alert( random(1, 5) );
+alert( random(1, 5) );
+alert( random(1, 5) );
+*/
