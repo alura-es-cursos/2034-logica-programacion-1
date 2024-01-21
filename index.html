@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,31 +10,24 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>JS Game</title>
+    <script src="/logica-programacion1/app.js"></script>
+
+
 </head>
 
 <body>
-
     <div class="container">
         <div class="container__contenido">
+            <img src="./img/robot.png" alt="Robot" class="container__imagen-robot" />
             <div class="container__informaciones">
-                <div class="container__texto">
-                    <h1></h1> <!-- el titulo está vacío, para agregarlo posteriormente con js -->
-                    <p class="texto__parrafo"></p> <!-- nuevamente, parrafo vacío para asignar texto por js -->
-                </div>
-                <input type="number" id="intentoUsuario" min="1" max="10" class="container__input">
-                <div class="chute container__botones">
-                    <button onclick="verificarIntento();" class="container__boton" id="iniciar" disabled>Intentar</button> <!-- oneclick (hascer una funcional al clickear) -->
-                    <button onclick="nuevoJuego();" class="container__boton" id="reiniciar" disabled>Nuevo juego</button>
+                <img src="./img/trophy.png" alt="Icono de trofeo" />
+                 <div class="container__texto">
+                    <h1><span class="container__texto-azul">Correcto!</span></h1>
+                    <h2>Descubriste el número secreto!</h2>
                 </div>
             </div>
-            <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
         </div>
     </div>
-
-
-
-
-    <script src="/logica-programacion-2/app.js" defer></script>
 </body>
-
 </html>
+
